@@ -1,13 +1,13 @@
 #!/bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          uwsgi
+# Provides:          uwsgi-emperor
 # Required-Start:    $all
 # Required-Stop:     $all
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: starts the uwsgi app server
-# Description:       starts uwsgi app server using start-stop-daemon
+# Short-Description: starts the uWSGI app server
+# Description:       starts uWSGI app server using start-stop-daemon
 ### END INIT INFO
 
 PATH=/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
