@@ -16,4 +16,4 @@ It also supports `stop`, `restart`, `force-reload`, `reload`, and `status`.
 
 ## Log
 
-The log of uWSGI Emperor will be placed at `/var/log/uwsgi-emperor.log`.
+The log of the uWSGI emperor will be placed at `/var/log/uwsgi-emperor.log`.
