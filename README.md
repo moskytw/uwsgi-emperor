@@ -8,7 +8,7 @@ It is the a LSB init script for uWSGI Emperor mode.
 
 ## Usage
 
-Put your uWSGI configs into `/etc/uwsgi-emperor`, then run:
+Put your uWSGI configs into `/etc/uwsgi-emperor`, and then run:
 
     sudo service uwsgi-emperor start
 
