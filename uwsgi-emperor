@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# It is authored by Mosky Liu <mosky.tw@gmail.com>.
+
 ### BEGIN INIT INFO
 # Provides:          uwsgi-emperor
 # Required-Start:    $all
