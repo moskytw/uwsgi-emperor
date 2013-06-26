@@ -1,6 +1,6 @@
 # Initialize uWSGI Emperor
 
-It is the a LSB init script for uWSGI Emperor mode.
+It is a LSB init script for uWSGI Emperor mode.
 
 ## Installation
 
