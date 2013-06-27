@@ -22,9 +22,9 @@ VASSALS=/etc/uwsgi-emperor
 LOGFILE=/var/log/uwsgi-emperor.log
 
 # Include uwsgi defaults if available
-if [ -f /etc/default/uwsgi ]
+if [ -f /etc/default/uwsgi-emperor ]
 then
-    . /etc/default/uwsgi
+    . /etc/default/uwsgi-emperor
 fi
 
 test -x $DAEMON || exit 1
