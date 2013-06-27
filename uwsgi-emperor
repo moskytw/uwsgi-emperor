@@ -80,7 +80,7 @@ case "$1" in
         log_end_msg $?
         ;;
     status)
-        status_of_proc -p $PIDFILE "$DAEMON" uwsgi
+        status_of_proc -p $PIDFILE "$DAEMON" $NAME
         ;;
     *)
         echo "Usage: $NAME {start|stop|restart|reload|force-reload|statu}" >&2
