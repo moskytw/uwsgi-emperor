@@ -29,6 +29,8 @@ fi
 
 test -x "$DAEMON" || exit 1
 test -d "$VASSALS" || mkdir -p $VASSALS
+test -d "`dirname $PIDFILE`" || mkdir -p `dirname $PIDFILE`
+test -d "`dirname $LOGFILE`" || mkdir -p `dirname $LOGFILE`
 
 set -e
 
