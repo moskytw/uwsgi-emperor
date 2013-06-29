@@ -28,7 +28,7 @@ then
 fi
 
 test -x "$DAEMON" || exit 1
-test -d "$VASSALS" || mkdir -p "$VASSALS"
+test -d "$VASSALS" || mkdir -p $VASSALS
 
 set -e
 
@@ -56,7 +56,7 @@ do_reload()
         --oknodo --exec "$DAEMON"
 }
 
-case "$1" in
+case $1 in
     start)
         log_daemon_msg "Starting $DESC" "$NAME"
         do_start
