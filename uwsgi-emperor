@@ -17,8 +17,8 @@ DAEMON=`which uwsgi`
 NAME=uwsgi-emperor
 DESC=uwsgi-emperor
 
-PIDFILE=/run/uwsgi-emperor.pid
 VASSALS=/etc/uwsgi-emperor
+PIDFILE=/run/uwsgi-emperor.pid
 LOGFILE=/var/log/uwsgi-emperor.log
 
 # Include uwsgi defaults if available
