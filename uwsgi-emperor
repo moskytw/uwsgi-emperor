@@ -27,8 +27,8 @@ then
     . /etc/default/uwsgi-emperor
 fi
 
-test -x $DAEMON || exit 1
-test -d $VASSALS || mkdir -p $VASSALS
+test -x "$DAEMON" || exit 1
+test -d "$VASSALS" || mkdir -p "$VASSALS"
 
 set -e
 
@@ -36,24 +36,24 @@ set -e
 
 do_start()
 {
-    start-stop-daemon --start --quiet --pidfile $PIDFILE \
-        --retry 5 --exec $DAEMON --oknodo \
+    start-stop-daemon --start --quiet --pidfile "$PIDFILE" \
+        --retry 5 --exec "$DAEMON" --oknodo \
         -- \
-        --emperor $VASSALS --pidfile $PIDFILE \
-        --daemonize $LOGFILE \
+        --emperor "$VASSALS" --pidfile "$PIDFILE" \
+        --daemonize "$LOGFILE" \
         --die-on-term
 }
 
 do_stop()
 {
-    start-stop-daemon --stop --quiet --pidfile $PIDFILE \
-        --retry 5 --exec $DAEMON --oknodo
+    start-stop-daemon --stop --quiet --pidfile "$PIDFILE" \
+        --retry 5 --exec "$DAEMON" --oknodo
 }
 
 do_reload()
 {
-    start-stop-daemon --stop --signal HUP --quiet --pidfile $PIDFILE \
-        --oknodo --exec $DAEMON
+    start-stop-daemon --stop --signal HUP --quiet --pidfile "$PIDFILE" \
+        --oknodo --exec "$DAEMON"
 }
 
 case "$1" in
@@ -80,7 +80,7 @@ case "$1" in
         log_end_msg $?
         ;;
     status)
-        status_of_proc -p $PIDFILE "$DAEMON" $NAME
+        status_of_proc -p "$PIDFILE" "$DAEMON" "$NAME"
         ;;
     *)
         echo "Usage: $NAME {start|stop|restart|reload|force-reload|statu}" >&2
